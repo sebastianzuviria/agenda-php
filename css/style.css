@@ -1,0 +1,296 @@
+/** Custom Properties **/
+:root {
+    --colorPrimario: #c2185b;
+    --colorSecundario: #ffc107;
+    --colorPrimarioOscuro: rgb(156, 10, 69);
+    --fuentePrimaria: 'Arial', Helvetica, sans-serif;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    font-family: var(--fuentePrimaria);
+}
+
+.bg-amarillo {
+    background-color: var(--colorSecundario);
+}
+
+.bg-blanco{
+    background-color: white;
+}
+
+.barra {
+    align-items: center;
+    position: relative;
+}
+
+/** Botones **/
+
+.btn {
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.btn-editar {
+    color: var(--colorSecundario);
+}
+
+.btn-borrar {
+    color: var(--colorPrimario);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.volver {
+    position: absolute;
+    top: 2.5rem;
+    background-color: var(--colorSecundario);
+    border-radius: .5rem;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: .5rem 1.5rem;
+}
+
+.contenedor {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.sombra {
+    box-shadow: 0rem .2rem .5rem 0rem rgba(0, 0, 0, 0.71);
+    border-radius: 1rem;
+}
+
+h1, h2 {
+    font-family: var(--fuenteSecundaria);
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: white;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--colorPrimario);
+}
+
+.contenedor-barra {
+    background-color: var(--colorPrimarioOscuro);
+
+    
+}
+
+/** Formulario **/
+
+form {
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+form legend {
+    font-family: var(--fuenteSecundaria);
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+legend span {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    clear: both;
+    display: block;
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.campos input[type="text"],
+.campos input[type="tel"] {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    border: none;
+    padding: .5rem;
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+input[type="submit"] {
+     background-color: var(--colorPrimario);
+     border: none;
+     color: white;
+     padding: 1rem 4rem;
+     text-transform: uppercase;
+     font-size: 1.4rem;
+     transition: background-color .3s ease-in-out;
+     flex: 1;
+}
+
+@media (min-width: 768px) {
+    input[type="submit"] {
+        flex: 0 0 auto;
+    }
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--colorPrimarioOscuro);
+}
+
+.campo {
+    margin-top: 3rem;
+}
+
+.campo {
+    padding: .5rem 0;
+}
+
+@media (min-width: 768px) {
+    .campos {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .campo {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+i {
+    font-size: 2rem;
+}
+
+/** Listado Contactos **/
+
+.contactos {
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.contenedor-contactos {
+    max-width: 70%;
+    margin: 4rem auto 0 auto;
+}
+
+.total-contactos {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--colorPrimario);
+    font-size: 2.2rem;
+}
+
+.total-contactos span {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+.buscador {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: .1rem solid #e1e1e1;
+    margin: 2rem 0;
+}
+
+.contenedor-tabla {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+@media (min-width: 605px) {
+    .contenedor-tabla{
+    overflow: hidden;
+    }
+    
+}
+
+.listado-contactos {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+}
+
+.listado-contactos thead {
+    background-color: var(--colorPrimario);
+    color: white;
+    text-transform: uppercase;
+}
+
+.listado-contactos thead th {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+ 
+}
+
+.listado-contactos tbody td {
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+
+.listado-contactos button {
+    border: none;
+    background-color: transparent!important;
+}
+
+
+.listado-contactos tbody td:nth-child(4) {
+    text-align: center;
+} 
+
+/** Notificaciones **/
+
+
+.notificacion {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    padding: 1rem 3rem;
+    opacity: 0;
+    font-size: 1.4rem;
+    transition: opacity .5s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/** Colores de las notificaciones **/
+
+.correcto {
+    background-color: rgb(179, 241, 117);
+    color: green;
+}
+
+.error {
+    background-color: rgb(238, 148, 166);
+    color: rgb(163, 0, 33);
+}
